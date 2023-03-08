@@ -5,5 +5,13 @@
     "extends": "dtmi:io:tributech:source:base;1",
     "displayName": "Chimero Update Management", 
     "contents" : [
+        {
+            "@type" : "Property", 
+            "name" : "UpdateServiceEndpoint", 
+            "schema" : "string", 
+            "writable" : true, 
+            "displayName" : "Update Service URL",
+            "description" : "GRPC Endpoint to the Update Service within the PLC"
+        } 
     ]
 }
