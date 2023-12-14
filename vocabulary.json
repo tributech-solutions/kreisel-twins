@@ -5,6 +5,7 @@
     "issuerURL": "https://www.kreiselelectric.com/",
     "documentationURL": "https://github.com/tributech-solutions/kreisel-twins",
     "references": [
-        "https://raw.githubusercontent.com/tributech-solutions/kreisel-twins/master/DTDL/source_updatemanagement.json"
+        "https://raw.githubusercontent.com/tributech-solutions/kreisel-twins/master/DTDL/source_updatemanagement.json",
+        "https://raw.githubusercontent.com/tributech-solutions/kreisel-twins/master/DTDL/source_chimero_edge_api.json"
     ]
 }

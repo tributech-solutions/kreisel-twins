@@ -1,0 +1,62 @@
+{
+    "@context" : "dtmi:dtdl:context;2",
+    "@id" : "dtmi:io:kreisel:source:chimero_edge_api;1", 
+    "@type": "Interface", 
+    "extends": "dtmi:io:tributech:source:edge:base;1",
+    "displayName": "Chimero Edge Api", 
+    "contents" : [
+        {
+            "@type" : "Property", 
+            "name" : "DefaultHmiVideoUri", 
+            "schema" : "string", 
+            "writable" : true, 
+            "displayName" : "Default Video URL",
+            "description" : "The default video URL to be downloaded on startup if download on startup is enabled"
+        },
+        {
+            "@type" : "Property", 
+            "name" : "HmiVideoFileEnding", 
+            "schema" : "string", 
+            "writable" : true, 
+            "displayName" : "Hmi Video File Ending",
+            "description" : "This file ending will be used to validate the blob storage file ending (e.g. mp4, avi, mov)"
+        },
+        {
+            "@type" : "Property", 
+            "name" : "HmiVideoFileMimeType", 
+            "schema" : "string", 
+            "writable" : true, 
+            "displayName" : "Hmi Video Streaming MIME type",
+            "description" : "The MIME type of the API response for the video stream (e.g. video/mp4, application/octet-stream)"
+        },
+        {
+            "@type" : "Property", 
+            "name" : "HmiDownloadStartupHandling", 
+            "writable" : true, 
+            "displayName" : "Default Video Handling on Startup",
+            "description" : "Configure how the default Video URL is handled on startup",
+            "schema" : {
+                "@type": "Enum", 
+                "valueSchema":  "string", 
+                "enumValues" : [
+                    {
+                        "name" : "DontDownloadOnStartup", 
+                        "displayName" : "Dont Download", 
+                        "enumValue":  "DontDownloadOnStartup", 
+                        "comment": "Do not download the default video on startup"
+                    },{
+                        "name" : "DownloadAndReplace", 
+                        "displayName" : "Download and replace", 
+                        "enumValue":  "DownloadAndReplace", 
+                        "comment": "Download on startup and replace exsting Video"
+                    },{
+                        "name" : "DownloadIfNotExists", 
+                        "displayName" : "Download if not exists", 
+                        "enumValue":  "DownloadIfNotExists", 
+                        "comment": "Download on startup if no Video exsists"
+                    }
+                ]
+            }
+        }
+    ]
+}
