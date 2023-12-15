@@ -48,12 +48,12 @@
                         "name" : "DownloadAndReplace", 
                         "displayName" : "Download and replace", 
                         "enumValue":  "DownloadAndReplace", 
-                        "comment": "Download on startup and replace exsting Video"
+                        "comment": "Download on startup and replace existing Video"
                     },{
                         "name" : "DownloadIfNotExists", 
                         "displayName" : "Download if not exists", 
                         "enumValue":  "DownloadIfNotExists", 
-                        "comment": "Download on startup if no Video exsists"
+                        "comment": "Download on startup if no Video exists"
                     }
                 ]
             }
