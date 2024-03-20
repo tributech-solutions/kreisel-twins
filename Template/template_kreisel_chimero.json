@@ -325,7 +325,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "Battery - SoC",
+          "Name": "Battery - Charger SoC",
           "Unit": "%",
           "Identifier": "States.stBMS.lrSOC",
           "Encoding": "DOUBLE",
@@ -463,7 +463,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "System - OCPP Router - Modem restarts",
+          "Name": "System - OCPP Router - Modem reboot",
           "Unit": "",
           "Identifier": "PRG_LteRouter.fbOcppRouter.IN_bRestartModem",
           "Encoding": "BOOL",
@@ -1063,7 +1063,7 @@
           "Unit": "dbm",
           "Identifier": "PRG_LteRouter.fbMainRouter.OUT_stStatus.iSignalStrength",
           "Encoding": "INT32",
-          "Datatype": "DINT",
+          "Datatype": "INT",
           "ReadMode": "ONCHANGE"
         },
         {
@@ -2228,7 +2228,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "System - Safety - Outputs active",
+          "Name": "System - Safety - State",
           "Unit": "",
           "Identifier": "Safety.OutputsActive",
           "Datatype": "BOOL",
@@ -2365,7 +2365,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "System - Safety - Contactors fault",
+          "Name": "System - Safety - Contactors Check",
           "Unit": "",
           "Identifier": "Safety.ErrorContactors",
           "Datatype": "BOOL",
@@ -2436,7 +2436,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "System - Software Version Battery cooler",
+          "Name": "System - Software Version Battery Thermal Management",
           "Unit": "",
           "Identifier": "States.stAircontecStates.sFirmwareVersion",
           "Encoding": "STRING_UTF8",
@@ -2954,7 +2954,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "Battery Detail - Charged Energy",
+          "Name": "Battery Detail - Battery Energy Output",
           "Unit": "kWh",
           "Identifier": "States.stBMS.lrEnergyCharged",
           "Encoding": "DOUBLE",
@@ -3008,7 +3008,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "Charger - Active Alarms",
+          "Name": "Charger - Active Errors",
           "Unit": "",
           "Identifier": "Cloud.sActiveAlarms",
           "Encoding": "STRING_UTF8",
@@ -3471,7 +3471,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "Charging Port 2 - Lock",
+          "Name": "Charging Port 2 - Lock Charging Point",
           "Identifier": "Cloud.bChrgPort2_Lock",
           "Unit": "",
           "Encoding": "BOOL",
@@ -4396,7 +4396,7 @@
           "$metadata": {
             "$model": "dtmi:io:tributech:stream:tcads;1"
           },
-          "Name": "Charging Port 1 - Lock",
+          "Name": "Charging Port 1 - Lock Charging Point",
           "Identifier": "Cloud.bChrgPort1_Lock",
           "Unit": "",
           "Datatype": "BOOL",
@@ -4964,6 +4964,18 @@
           "Encoding": "INT32",
           "Datatype": "UINT",
           "ReadMode": "ONCHANGE"
+        },
+        {
+          "$dtId": "$$uuid413$$",
+          "$etag": "22",
+          "$metadata": {
+            "$model": "dtmi:io:kreisel:source:chimero_edge_api;1"
+          },
+          "Name": "Chimero Edge Api",
+          "DefaultHmiVideoUri": "https://chimero.blob.core.windows.net/chargervideos/videoDefault.mp4",
+          "HmiVideoFileEnding": "mp4",
+          "HmiVideoFileMimeType": "video/mp4",
+          "HmiDownloadStartupHandling": "DownloadIfNotExists"
         }
       ],
       "relationships": [
@@ -7849,6 +7861,13 @@
           "$etag": "130",
           "$sourceId": "$$root_uuid$$",
           "$targetId": "$$uuid103$$",
+          "$relationshipName": "Sources"
+        },
+        {
+          "$relationshipId": "f3e3e3e3-3e3e-3e3e-3e3e-3e3e3e3e3e3e",
+          "$etag": "130",
+          "$sourceId": "$$root_uuid$$",
+          "$targetId": "$$uuid413$$",
           "$relationshipName": "Sources"
         }
       ]
