@@ -1,0 +1,32 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:io:kreisel:stream:updatemanagement;1",
+    "@type": "Interface",
+    "displayName": "Update Management Log Stream",
+    "extends": "dtmi:io:tributech:stream:base;1",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Type",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "Version",
+                        "displayName": "Version",
+                        "enumValue": "Version"
+                    },
+                    {
+                        "name": "Execution",
+                        "displayName": "Execution",
+                        "enumValue": "Execution"
+                    }
+                ]
+            },
+            "writable": true,
+            "displayName": "Log Type",
+            "description": "Type for a log entry"
+        }
+    ]
+}
