@@ -1,6 +1,6 @@
 {
     "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:io:kreisel:stream:updatemanagement;1",
+    "@id": "dtmi:io:kreisel:stream:updatemanagementlogs;1",
     "@type": "Interface",
     "displayName": "Update Management Log Stream",
     "extends": "dtmi:io:tributech:stream:base;1",
