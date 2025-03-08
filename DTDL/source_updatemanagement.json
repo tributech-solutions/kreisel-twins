@@ -12,6 +12,23 @@
             "writable" : true, 
             "displayName" : "Update Service URL",
             "description" : "GRPC Endpoint to the Update Service within the PLC"
-        } 
+        },
+        {
+            "@type" : "Property", 
+            "name" : "WindowsServiceManagementServiceEndpoint", 
+            "schema" : "string", 
+            "writable" : true, 
+            "displayName" : "WindowsServiceManagementService URL",
+            "description" : "GRPC Endpoint to the Windows Service Management Service for updating the Update Service"
+        },
+        {
+            "@type": "Relationship",
+            "name": "UpdateManagementLogs",
+            "minMultiplicity": 0,
+            "maxMultiplicity": 2,
+            "target": "dtmi:io:kreisel:stream:updatemanagementlogs;1",
+            "displayName": "Update Management Logs",
+            "description": "Contains Version and Execution logs reported by the Update Management"
+        }
     ]
 }
